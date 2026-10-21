@@ -1,15 +1,15 @@
-const menuButton = document.querySelector('.menu-button');
+const menuButton = document.querySelector('[data-menu-toggle]');
 const navigation = document.querySelector('#navigation');
 
 function closeMenu() {
-  navigation.classList.remove('is-open');
+  navigation.dataset.open = 'false';
   menuButton.setAttribute('aria-expanded', 'false');
   menuButton.setAttribute('aria-label', 'Apri menu');
 }
 
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  navigation.classList.toggle('is-open', !isOpen);
+  navigation.dataset.open = String(!isOpen);
   menuButton.setAttribute('aria-expanded', String(!isOpen));
   menuButton.setAttribute('aria-label', isOpen ? 'Apri menu' : 'Chiudi menu');
 });
@@ -25,7 +25,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-const privacyToggle = document.querySelector('.privacy-toggle');
+const privacyToggle = document.querySelector('[data-privacy-toggle]');
 const privacyInfo = document.querySelector('#privacy-info');
 privacyToggle.addEventListener('click', () => {
   const isExpanded = privacyToggle.getAttribute('aria-expanded') === 'true';

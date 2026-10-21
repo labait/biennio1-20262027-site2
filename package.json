@@ -1,0 +1,14 @@
+{
+  "name": "carrozzeria-molinari",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./tailwind.css -o ./styles.css --minify",
+    "dev": "tailwindcss -i ./tailwind.css -o ./styles.css --watch",
+    "check": "node --check script.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

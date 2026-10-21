@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" class="scroll-smooth scroll-pt-[75px] scheme-light motion-reduce:scroll-auto md:scroll-pt-[94px]">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,56 +12,111 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Vai al contenuto</a>
-    <header class="site-header">
-      <a class="wordmark" href="#" aria-label="Carrozzeria Molinari, inizio pagina"><span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span><span><span class="brand-small">CARROZZERIA</span><span class="brand-name">MOLINARI<span class="brand-dot">.</span></span></span></a>
-      <button class="menu-button" type="button" aria-label="Apri menu" aria-controls="navigation" aria-expanded="false"><span></span><span></span></button>
-      <nav id="navigation" aria-label="Navigazione principale">
-        <a class="nav-link" href="#specializzazione">La nostra specializzazione</a>
-        <a class="nav-link" href="#vantaggi">Perché Molinari</a>
-        <a class="button button-small" href="#contatti">Parliamo della tua auto <span aria-hidden="true">↗</span></a>
+  <body class="bg-paper font-body text-base leading-[1.6] tracking-normal text-ink selection:bg-brand selection:text-paper [&_:focus-visible]:outline-3 [&_:focus-visible]:outline-offset-5 [&_:focus-visible]:outline-brand [&_button]:cursor-pointer [&_svg]:stroke-current [&_svg]:stroke-[1.6] [&_svg]:[stroke-linecap:round] [&_svg]:[stroke-linejoin:round] motion-reduce:[&_*]:animate-none motion-reduce:[&_*]:transition-none">
+    <a class="fixed top-2.5 left-2.5 z-100 -translate-y-[160%] bg-paper p-3 focus:translate-y-0" href="#main">Vai al contenuto</a>
+    <header class="relative z-10 flex h-20 items-center justify-between bg-paper px-[22px] md:h-[100px] md:px-8 lg:px-14">
+      <a class="flex items-center gap-[11px]" href="#" aria-label="Carrozzeria Molinari, inizio pagina">
+        <span class="flex h-[33px] -skew-x-[17deg] items-end gap-1 md:h-[39px]" aria-hidden="true"><span class="h-full w-[7px] bg-brand md:w-[9px]"></span><span class="h-[76%] w-[7px] bg-brand md:w-[9px]"></span><span class="h-[53%] w-[7px] bg-brand md:w-[9px]"></span></span>
+        <span><span class="block text-[8px] leading-[1.2] font-semibold md:text-[10px]">CARROZZERIA</span><span class="font-display text-[30px] leading-none font-extrabold md:text-[34px]">MOLINARI<span class="text-brand">.</span></span></span>
+      </a>
+      <button data-menu-toggle class="group flex size-[42px] flex-col items-center justify-center gap-1.5 rounded-[3px] border border-line md:hidden" type="button" aria-label="Apri menu" aria-controls="navigation" aria-expanded="false"><span class="h-0.5 w-[18px] bg-ink transition-transform duration-200 group-aria-expanded:translate-y-1 group-aria-expanded:rotate-45"></span><span class="h-0.5 w-[18px] bg-ink transition-transform duration-200 group-aria-expanded:-translate-y-1 group-aria-expanded:-rotate-45"></span></button>
+      <nav id="navigation" data-open="false" class="absolute inset-x-0 top-20 hidden flex-col gap-[22px] bg-paper p-6 shadow-[0_12px_16px_#20222315] data-[open=true]:flex md:static md:flex md:flex-row md:items-center md:p-0 md:shadow-none lg:gap-[35px]" aria-label="Navigazione principale">
+        <a class="text-sm font-medium hover:text-brand" href="#specializzazione">La nostra specializzazione</a>
+        <a class="text-sm font-medium hover:text-brand" href="#vantaggi">Perché Molinari</a>
+        <a class="inline-flex min-h-[46px] items-center justify-between gap-[22px] rounded-[3px] bg-brand px-5 py-[13px] text-[13px] font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-brand-hover" href="#contatti">Parliamo della tua auto <span class="text-2xl leading-none font-normal" aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-photo" src="https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Un meccanico sorridente al lavoro sul motore di un'auto in officina" fetchpriority="high">
-        <div class="hero-shade"></div>
-        <div class="hero-content page-width">
-          <div class="eyebrow"><span class="status-dot"></span> SPECIALISTI NELLA RIPARAZIONE DA GRANDINE</div>
-          <h1 id="hero-title">LA GRANDINE<br>PASSA.<br><span>LA TUA AUTO<br>TORNA A SPLENDERE.</span></h1>
-          <p>Da Carrozzeria Molinari rimettiamo in forma la tua auto.<br class="desktop-break"> Con mani esperte, tempi rapidi e nessuna sorpresa.</p>
-          <a class="button" href="#contatti">Richiedi un preventivo <span aria-hidden="true">↗</span></a>
-          <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg> La tranquillità di un lavoro garantito.</div>
+      <section class="relative min-h-[690px] overflow-hidden bg-[#313635] text-paper xs:min-h-[720px] md:h-[calc(100svh-100px)] md:max-h-[900px] md:min-h-[690px] lg:min-h-[700px] 2xl:min-h-[800px]" aria-labelledby="hero-title">
+        <img class="absolute inset-0 size-full object-cover object-[62%_center] md:object-[59%_center] lg:object-[center_43%]" src="https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=2400" alt="Un meccanico sorridente al lavoro sul motore di un'auto in officina" fetchpriority="high">
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,22,23,.91),rgba(17,22,23,.52)_80%),linear-gradient(0deg,rgba(17,22,23,.6),transparent_45%)] md:bg-[linear-gradient(90deg,rgba(17,22,23,.92)_0%,rgba(17,22,23,.82)_29%,rgba(17,22,23,.25)_65%,rgba(17,22,23,.08)),linear-gradient(0deg,rgba(17,22,23,.65),transparent_25%)]"></div>
+        <div class="relative mx-auto w-[calc(100%-44px)] animate-arrive pt-[46px] pb-[110px] md:w-[calc(100%-64px)] md:animate-none md:pt-16 md:pb-[100px] lg:w-[min(1280px,calc(100%-112px))] 2xl:pt-20">
+          <div class="flex max-w-[285px] items-center gap-[9px] text-[9px] leading-normal font-semibold md:max-w-none md:text-[11px]"><span class="inline-block size-1.5 shrink-0 rounded-full bg-brand"></span> SPECIALISTI NELLA RIPARAZIONE DA GRANDINE</div>
+          <h1 id="hero-title" class="mt-6 max-w-[700px] font-display text-[51px] leading-[1.02] font-bold xs:text-[60px] md:mt-[25px] md:text-[68px] md:leading-[.98] lg:text-[76px] 2xl:text-[88px]">LA GRANDINE<br>PASSA.<br><span>LA TUA AUTO<br>TORNA A SPLENDERE.</span></h1>
+          <p class="mt-6 mb-[27px] max-w-[330px] text-sm leading-[1.75] text-[#e2e5e3] md:max-w-none md:text-base md:leading-[1.7] 2xl:text-lg">Da Carrozzeria Molinari rimettiamo in forma la tua auto.<br class="hidden md:block"> Con mani esperte, tempi rapidi e nessuna sorpresa.</p>
+          <a class="inline-flex min-h-[54px] items-center justify-between gap-8 rounded-[3px] bg-brand px-[23px] py-4 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-brand-hover md:text-[15px]" href="#contatti">Richiedi un preventivo <span class="text-2xl leading-none font-normal" aria-hidden="true">↗</span></a>
+          <div class="mt-5 flex items-center gap-[9px] text-[11px] text-[#e0e2df] md:text-xs"><svg class="size-[18px]" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg> La tranquillità di un lavoro garantito.</div>
         </div>
-        <div class="hero-bottom"><span>LA PASSIONE SI VEDE. LA GRANDINE NON PIÙ.</span><a href="#vantaggi" aria-label="Scopri i nostri vantaggi">SCOPRI MOLINARI <span aria-hidden="true">↓</span></a></div>
-        <span class="hero-index" aria-hidden="true">01 / MOLINARI</span>
+        <div class="absolute inset-x-[22px] bottom-0 flex h-[59px] items-center justify-between border-t border-paper/20 text-[7px] font-medium xs:text-[8px] md:inset-x-8 md:h-16 md:text-[10px] lg:inset-x-14"><span class="max-w-[155px] md:max-w-none">LA PASSIONE SI VEDE. LA GRANDINE NON PIÙ.</span><a class="flex items-center gap-2.5 md:gap-[18px]" href="#vantaggi" aria-label="Scopri i nostri vantaggi">SCOPRI MOLINARI <span class="text-xl" aria-hidden="true">↓</span></a></div>
+        <span class="absolute top-1/2 right-6 hidden text-[9px] [writing-mode:vertical-rl] md:block" aria-hidden="true">01 / MOLINARI</span>
       </section>
 
-      <section class="advantages" id="vantaggi" aria-label="I nostri punti di forza">
-        <div class="page-width benefits-grid">
-          <article class="benefit"><span class="benefit-number">01</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m19 3-12 15h9l-3 11 12-16h-9l3-10Z"/></svg><h2>Veloci. Davvero.</h2><p>Meno tempo in officina.<br>Più tempo sulla tua strada.</p></article>
-          <article class="benefit"><span class="benefit-number">02</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 2v6m0 16v6M2 16h6m16 0h6"/></svg><h2>Precisione al dettaglio.</h2><p>Ogni ammaccatura conta.<br>Ogni finitura fa la differenza.</p></article>
-          <article class="benefit"><span class="benefit-number">03</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M24 8a10 10 0 1 0 0 16M5 13h15M5 19h13"/></svg><h2>Il giusto prezzo.</h2><p>Costi contenuti e chiari.<br>Solo il lavoro che serve.</p></article>
-          <article class="benefit"><span class="benefit-number">04</span><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m16 3 11 4v9c0 7-11 13-11 13S5 23 5 16V7l11-4Z"/><path d="m11 16 4 4 7-8"/></svg><h2>Garanzia, senza dubbi.</h2><p>Ci mettiamo la firma.<br>E tutta la nostra cura.</p></article>
+      <section class="scroll-mt-0 border-b border-line bg-paper" id="vantaggi" aria-label="I nostri punti di forza">
+        <div class="mx-auto grid w-[calc(100%-44px)] grid-cols-2 py-3 md:w-[calc(100%-64px)] md:grid-cols-4 md:py-10 lg:w-[min(1280px,calc(100%-112px))]">
+          <article class="relative border-b border-line py-6 pr-4 md:border-r md:border-b-0 md:py-0 md:pr-5 lg:pr-[30px]">
+            <span class="absolute top-6 right-4 font-display text-xs text-[#9a9d9a] md:top-0.5 md:right-[29px]">01</span><svg class="mb-[13px] size-[27px] text-brand md:mb-[18px] md:size-[29px]" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m19 3-12 15h9l-3 11 12-16h-9l3-10Z"/></svg>
+            <h2 class="mb-1 min-h-10 max-w-[145px] text-sm leading-tight font-semibold xs:text-base md:mb-2.5 md:min-h-0 md:max-w-none lg:text-lg">Veloci. Davvero.</h2><p class="text-[11px] leading-[1.7] text-muted xs:text-xs lg:text-[13px]">Meno tempo in officina.<br>Più tempo sulla tua strada.</p>
+          </article>
+          <article class="relative border-b border-l border-line py-6 pl-5 md:border-r md:border-b-0 md:border-l-0 md:px-5 md:py-0 lg:px-[30px]">
+            <span class="absolute top-6 right-0 font-display text-xs text-[#9a9d9a] md:top-0.5 md:right-[29px]">02</span><svg class="mb-[13px] size-[27px] text-brand md:mb-[18px] md:size-[29px]" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 2v6m0 16v6M2 16h6m16 0h6"/></svg>
+            <h2 class="mb-1 min-h-10 max-w-[145px] text-sm leading-tight font-semibold xs:text-base md:mb-2.5 md:min-h-0 md:max-w-none lg:text-lg">Precisione al dettaglio.</h2><p class="text-[11px] leading-[1.7] text-muted xs:text-xs lg:text-[13px]">Ogni ammaccatura conta.<br>Ogni finitura fa la differenza.</p>
+          </article>
+          <article class="relative border-line py-6 pr-4 md:border-r md:px-5 md:py-0 lg:px-[30px]">
+            <span class="absolute top-6 right-4 font-display text-xs text-[#9a9d9a] md:top-0.5 md:right-[29px]">03</span><svg class="mb-[13px] size-[27px] text-brand md:mb-[18px] md:size-[29px]" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M24 8a10 10 0 1 0 0 16M5 13h15M5 19h13"/></svg>
+            <h2 class="mb-1 min-h-10 max-w-[145px] text-sm leading-tight font-semibold xs:text-base md:mb-2.5 md:min-h-0 md:max-w-none lg:text-lg">Il giusto prezzo.</h2><p class="text-[11px] leading-[1.7] text-muted xs:text-xs lg:text-[13px]">Costi contenuti e chiari.<br>Solo il lavoro che serve.</p>
+          </article>
+          <article class="relative border-l border-line py-6 pl-5 md:border-l-0 md:py-0 lg:pl-[30px]">
+            <span class="absolute top-6 right-0 font-display text-xs text-[#9a9d9a] md:top-0.5">04</span><svg class="mb-[13px] size-[27px] text-brand md:mb-[18px] md:size-[29px]" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m16 3 11 4v9c0 7-11 13-11 13S5 23 5 16V7l11-4Z"/><path d="m11 16 4 4 7-8"/></svg>
+            <h2 class="mb-1 min-h-10 max-w-[145px] text-sm leading-tight font-semibold xs:text-base md:mb-2.5 md:min-h-0 md:max-w-none lg:text-lg">Garanzia, senza dubbi.</h2><p class="text-[11px] leading-[1.7] text-muted xs:text-xs lg:text-[13px]">Ci mettiamo la firma.<br>E tutta la nostra cura.</p>
+          </article>
         </div>
       </section>
 
-      <section class="expertise page-width" id="specializzazione">
-        <div class="workshop-image"><img src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lavorazione professionale su un'automobile in officina" loading="lazy"><span class="image-label"><span class="status-dot"></span> MANI ESPERTE. RISULTATI CONCRETI.</span></div>
-        <div class="expertise-copy"><div class="eyebrow dark-eyebrow">LA NOSTRA SPECIALIZZAZIONE</div><h2>LA GRANDINE LASCIA IL SEGNO.<br><span>NOI LO TOGLIAMO.</span></h2><p>Un temporale può cambiare l'aspetto della tua auto in pochi minuti. Per rimetterla a posto servono esperienza, attenzione e gli strumenti giusti.</p><p>Valutiamo ogni danno e scegliamo l'intervento più adatto alla carrozzeria, con l'obiettivo di preservare la finitura originale dove possibile e contenere i costi.</p><ul class="check-list"><li>Valutazione attenta dei danni</li><li>Interventi mirati sulle ammaccature</li><li>Controllo finale delle superfici e delle finiture</li></ul><a class="text-link" href="#contatti">Raccontaci cosa è successo <span aria-hidden="true">↗</span></a></div>
+      <section class="mx-auto grid w-[calc(100%-44px)] items-center gap-[35px] py-[58px] md:w-[calc(100%-64px)] md:grid-cols-2 md:gap-[45px] md:py-20 lg:w-[min(1280px,calc(100%-112px))] lg:gap-[85px] lg:py-[105px]" id="specializzazione">
+        <div class="relative h-[340px] md:h-[475px]"><img class="size-full object-cover object-[55%_center]" src="https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Lavorazione professionale su un'automobile in officina" loading="lazy"><span class="absolute bottom-0 left-0 flex items-center gap-2.5 bg-ink px-[15px] py-[13px] text-[8px] text-paper md:px-5 md:py-[15px] md:text-[10px]"><span class="inline-block size-1.5 shrink-0 rounded-full bg-brand"></span> MANI ESPERTE. RISULTATI CONCRETI.</span></div>
+        <div>
+          <div class="text-[10px] leading-normal font-semibold text-brand">LA NOSTRA SPECIALIZZAZIONE</div>
+          <h2 class="mt-[18px] mb-6 font-display text-[42px] leading-[1.05] font-semibold md:text-[40px] lg:text-5xl">LA GRANDINE LASCIA IL SEGNO.<br><span class="text-brand">NOI LO TOGLIAMO.</span></h2>
+          <p class="mb-4 text-sm leading-[1.8] text-muted md:text-[15px]">Un temporale può cambiare l'aspetto della tua auto in pochi minuti. Per rimetterla a posto servono esperienza, attenzione e gli strumenti giusti.</p>
+          <p class="mb-4 text-sm leading-[1.8] text-muted md:text-[15px]">Valutiamo ogni danno e scegliamo l'intervento più adatto alla carrozzeria, con l'obiettivo di preservare la finitura originale dove possibile e contenere i costi.</p>
+          <ul class="my-[22px] space-y-[7px] text-[13px] font-medium">
+            <li class="flex items-baseline gap-[11px]"><span class="font-bold text-brand" aria-hidden="true">✓</span>Valutazione attenta dei danni</li>
+            <li class="flex items-baseline gap-[11px]"><span class="font-bold text-brand" aria-hidden="true">✓</span>Interventi mirati sulle ammaccature</li>
+            <li class="flex items-baseline gap-[11px]"><span class="font-bold text-brand" aria-hidden="true">✓</span>Controllo finale delle superfici e delle finiture</li>
+          </ul>
+          <a class="inline-flex items-center gap-6 border-b border-brand py-[9px] text-sm font-semibold" href="#contatti">Raccontaci cosa è successo <span class="text-[23px] text-brand" aria-hidden="true">↗</span></a>
+        </div>
       </section>
 
-      <section class="process">
-        <div class="page-width"><div class="section-heading"><div><div class="eyebrow dark-eyebrow">DAL PRIMO CONTATTO ALLA CONSEGNA</div><h2>TORNARE IN STRADA.<br>SENZA COMPLICAZIONI.</h2></div><p>Un percorso chiaro, dall'inizio alla fine.<br>Al resto pensiamo noi.</p></div><div class="steps"><article><span>01 <span aria-hidden="true">↗</span></span><h3>Ci racconti il danno.</h3><p>Descrivi cosa è successo alla tua auto. Partiamo dalle tue esigenze.</p></article><article><span>02 <span aria-hidden="true">↗</span></span><h3>Valutiamo insieme.</h3><p>Esaminiamo la carrozzeria e definiamo intervento, tempi e preventivo.</p></article><article><span>03 <span aria-hidden="true">↗</span></span><h3>Te la riconsegniamo.</h3><p>Ripariamo con precisione e controlliamo il risultato, prima di ridarti le chiavi.</p></article></div></div>
+      <section class="bg-silver py-[52px] md:pt-[74px] md:pb-20">
+        <div class="mx-auto w-[calc(100%-44px)] md:w-[calc(100%-64px)] lg:w-[min(1280px,calc(100%-112px))]">
+          <div class="gap-8 md:flex md:items-end md:justify-between">
+            <div><div class="text-[10px] leading-normal font-semibold text-brand">DAL PRIMO CONTATTO ALLA CONSEGNA</div><h2 class="mt-[17px] font-display text-[39px] leading-[1.05] font-semibold md:text-[45px]">TORNARE IN STRADA.<br>SENZA COMPLICAZIONI.</h2></div>
+            <p class="mt-[21px] pb-1 text-sm leading-[1.8] text-muted md:mt-0">Un percorso chiaro, dall'inizio alla fine.<br>Al resto pensiamo noi.</p>
+          </div>
+          <div class="mt-[30px] grid gap-[25px] md:mt-[45px] md:grid-cols-3 md:gap-11">
+            <article class="grid grid-cols-[44px_1fr] gap-x-[15px] border-t border-[#cbd0ca] pt-[18px] md:block"><span class="row-span-2 flex items-start justify-between font-display text-[26px] font-semibold text-brand md:items-center md:text-[22px]">01 <span class="hidden font-body text-[22px] font-normal md:inline" aria-hidden="true">↗</span></span><h3 class="mt-1 mb-2.5 text-lg leading-[1.05] font-semibold md:mt-[19px] md:mb-3">Ci racconti il danno.</h3><p class="text-[13px] leading-[1.75] text-muted md:max-w-[300px] md:text-sm">Descrivi cosa è successo alla tua auto. Partiamo dalle tue esigenze.</p></article>
+            <article class="grid grid-cols-[44px_1fr] gap-x-[15px] border-t border-[#cbd0ca] pt-[18px] md:block"><span class="row-span-2 flex items-start justify-between font-display text-[26px] font-semibold text-brand md:items-center md:text-[22px]">02 <span class="hidden font-body text-[22px] font-normal md:inline" aria-hidden="true">↗</span></span><h3 class="mt-1 mb-2.5 text-lg leading-[1.05] font-semibold md:mt-[19px] md:mb-3">Valutiamo insieme.</h3><p class="text-[13px] leading-[1.75] text-muted md:max-w-[300px] md:text-sm">Esaminiamo la carrozzeria e definiamo intervento, tempi e preventivo.</p></article>
+            <article class="grid grid-cols-[44px_1fr] gap-x-[15px] border-t border-[#cbd0ca] pt-[18px] md:block"><span class="row-span-2 flex items-start justify-between font-display text-[26px] font-semibold text-brand md:items-center md:text-[22px]">03 <span class="hidden font-body text-[22px] font-normal md:inline" aria-hidden="true">↗</span></span><h3 class="mt-1 mb-2.5 text-lg leading-[1.05] font-semibold md:mt-[19px] md:mb-3">Te la riconsegniamo.</h3><p class="text-[13px] leading-[1.75] text-muted md:max-w-[300px] md:text-sm">Ripariamo con precisione e controlliamo il risultato, prima di ridarti le chiavi.</p></article>
+          </div>
+        </div>
       </section>
 
-      <section class="contact" id="contatti">
-        <div class="page-width contact-layout"><div class="contact-copy"><div class="eyebrow"><span class="status-dot"></span> RIPARTIAMO DALLA TUA AUTO</div><h2>IL PRIMO PASSO?<br><span>PARLIAMONE.</span></h2><p>La tua auto ha subito una grandinata?<br>Raccontaci il danno e richiedi una valutazione.</p><div class="contact-signature"><span class="signature-mark" aria-hidden="true">M.</span><span>La tua auto, la nostra passione.<br><strong>Carrozzeria Molinari</strong></span></div></div>
-        <form id="contact-form"><div class="form-row"><div class="field"><label for="name">Nome e cognome <span>*</span></label><input id="name" name="name" placeholder="Come ti chiami?" autocomplete="name" required maxlength="100"></div><div class="field"><label for="phone">Telefono <span>*</span></label><input id="phone" name="phone" type="tel" placeholder="Il tuo numero" autocomplete="tel" required minlength="6" maxlength="30"></div></div><div class="field"><label for="email">Email <span>*</span></label><input id="email" name="email" type="email" placeholder="nome@esempio.it" autocomplete="email" required maxlength="254"></div><div class="field"><label for="message">Parlaci della tua auto <span>*</span></label><textarea id="message" name="message" rows="3" placeholder="Marca, modello e danni da grandine..." required maxlength="3000"></textarea></div><label class="consent"><input type="checkbox" required name="consent"><span>Ho letto la <button class="privacy-toggle" type="button" aria-expanded="false" aria-controls="privacy-info">nota sulla privacy</button> e acconsento al trattamento dei dati. *</span></label><div id="privacy-info" class="privacy-info" hidden>Questo modulo è dimostrativo: i dati restano nel browser e non vengono inviati o salvati. Non inserire informazioni sensibili. Prima della pubblicazione saranno necessari un servizio di invio e un'informativa del titolare del trattamento.</div><button class="button submit-button" type="submit">Richiedi il tuo preventivo <span aria-hidden="true">↗</span></button><p class="demo-note">Modulo dimostrativo: nessun dato verrà inviato.</p><p id="form-status" class="form-status" role="status" tabindex="-1" hidden></p></form></div>
+      <section class="bg-ink py-[57px] text-paper md:pt-[85px] md:pb-20" id="contatti">
+        <div class="mx-auto grid w-[calc(100%-44px)] gap-[38px] md:w-[calc(100%-64px)] md:grid-cols-2 md:gap-[50px] lg:w-[min(1280px,calc(100%-112px))] lg:gap-[100px]">
+          <div>
+            <div class="flex items-center gap-[9px] text-[10px] leading-normal font-semibold text-[#d7dbd7]"><span class="inline-block size-1.5 shrink-0 rounded-full bg-brand"></span> RIPARTIAMO DALLA TUA AUTO</div>
+            <h2 class="my-[22px] font-display text-[52px] leading-none font-semibold xs:text-[58px] md:my-[26px] lg:text-[66px]">IL PRIMO PASSO?<br><span class="text-brand">PARLIAMONE.</span></h2>
+            <p class="text-[15px] leading-[1.8] text-[#b8bdbb]">La tua auto ha subito una grandinata?<br>Raccontaci il danno e richiedi una valutazione.</p>
+            <div class="mt-[26px] flex items-center gap-[17px] md:mt-[55px]"><span class="font-display text-[50px] leading-none font-extrabold text-brand italic" aria-hidden="true">M.</span><span class="text-xs leading-[1.8] text-[#b8bdbb]">La tua auto, la nostra passione.<br><strong class="font-medium text-paper">Carrozzeria Molinari</strong></span></div>
+          </div>
+          <form id="contact-form">
+            <div class="grid gap-x-[13px] xs:grid-cols-2 md:gap-x-[18px]">
+              <div class="mb-[19px] flex flex-col gap-[7px]"><label class="text-[11px] font-medium md:text-xs" for="name">Nome e cognome <span class="text-[#f26760]">*</span></label><input class="h-[46px] w-full min-w-0 rounded-[3px] border border-[#535757] bg-[#2c2f2f] px-3.5 py-3 text-[13px] leading-normal text-paper placeholder:text-[#a3aaa6]" id="name" name="name" placeholder="Come ti chiami?" autocomplete="name" required maxlength="100"></div>
+              <div class="mb-[19px] flex flex-col gap-[7px]"><label class="text-[11px] font-medium md:text-xs" for="phone">Telefono <span class="text-[#f26760]">*</span></label><input class="h-[46px] w-full min-w-0 rounded-[3px] border border-[#535757] bg-[#2c2f2f] px-3.5 py-3 text-[13px] leading-normal text-paper placeholder:text-[#a3aaa6]" id="phone" name="phone" type="tel" placeholder="Il tuo numero" autocomplete="tel" required minlength="6" maxlength="30"></div>
+            </div>
+            <div class="mb-[19px] flex flex-col gap-[7px]"><label class="text-[11px] font-medium md:text-xs" for="email">Email <span class="text-[#f26760]">*</span></label><input class="h-[46px] w-full min-w-0 rounded-[3px] border border-[#535757] bg-[#2c2f2f] px-3.5 py-3 text-[13px] leading-normal text-paper placeholder:text-[#a3aaa6]" id="email" name="email" type="email" placeholder="nome@esempio.it" autocomplete="email" required maxlength="254"></div>
+            <div class="mb-[19px] flex flex-col gap-[7px]"><label class="text-[11px] font-medium md:text-xs" for="message">Parlaci della tua auto <span class="text-[#f26760]">*</span></label><textarea class="min-h-[100px] w-full min-w-0 resize-y rounded-[3px] border border-[#535757] bg-[#2c2f2f] px-3.5 py-3 text-[13px] leading-normal text-paper placeholder:text-[#a3aaa6]" id="message" name="message" rows="3" placeholder="Marca, modello e danni da grandine..." required maxlength="3000"></textarea></div>
+            <label class="flex items-start gap-2.5 text-[11px] leading-[1.7] text-[#c3c8c4]"><input class="mt-1 size-3.5 shrink-0 accent-brand" type="checkbox" required name="consent"><span>Ho letto la <button data-privacy-toggle class="underline" type="button" aria-expanded="false" aria-controls="privacy-info">nota sulla privacy</button> e acconsento al trattamento dei dati. *</span></label>
+            <div id="privacy-info" class="py-[15px] text-xs leading-[1.7] text-[#d7dbd7]" hidden>Questo modulo è dimostrativo: i dati restano nel browser e non vengono inviati o salvati. Non inserire informazioni sensibili. Prima della pubblicazione saranno necessari un servizio di invio e un'informativa del titolare del trattamento.</div>
+            <button class="mt-[22px] inline-flex min-h-[54px] w-full items-center justify-between gap-8 rounded-[3px] bg-brand px-[23px] py-4 text-sm font-semibold text-paper transition duration-200 hover:-translate-y-0.5 hover:bg-brand-hover md:text-[15px]" type="submit">Richiedi il tuo preventivo <span class="text-2xl leading-none font-normal" aria-hidden="true">↗</span></button>
+            <p class="mt-2.5 text-[10px] text-[#b3bab5]">Modulo dimostrativo: nessun dato verrà inviato.</p>
+            <p id="form-status" class="mt-[15px] rounded-[3px] border border-[#757f74] p-3.5 text-[13px] text-[#e2e9e0]" role="status" tabindex="-1" hidden></p>
+          </form>
+        </div>
       </section>
     </main>
-    <footer><div class="page-width footer-inner"><a class="footer-brand" href="#">CARROZZERIA <strong>MOLINARI<span>.</span></strong></a><p>Precisione nel lavoro. Passione per le auto.</p><span>© <span id="year">2026</span> Carrozzeria Molinari</span></div></footer>
+    <footer class="bg-[#191c1c] py-[29px] text-[#aeb5b0]"><div class="mx-auto flex w-[calc(100%-44px)] flex-wrap items-center justify-between gap-5 md:w-[calc(100%-64px)] md:flex-nowrap md:gap-[25px] lg:w-[min(1280px,calc(100%-112px))]"><a class="flex flex-col text-[8px] leading-[1.2] text-paper" href="#">CARROZZERIA <strong class="font-display text-[23px]">MOLINARI<span class="text-brand">.</span></strong></a><p class="hidden text-[11px] md:block">Precisione nel lavoro. Passione per le auto.</p><span class="text-[10px] md:text-[11px]">© <span id="year">2026</span> Carrozzeria Molinari</span></div></footer>
   </body>
 </html>

@@ -1,0 +1,32 @@
+@import "tailwindcss" source(none);
+@source "./index.html";
+
+@theme {
+  --color-brand: #e4342b;
+  --color-brand-hover: #c92a23;
+  --color-ink: #202223;
+  --color-muted: #66696a;
+  --color-paper: #fafbf9;
+  --color-silver: #f0f1ef;
+  --color-line: #dce0dc;
+  --font-body: "Barlow", sans-serif;
+  --font-display: "Barlow Condensed", sans-serif;
+  --breakpoint-*: initial;
+  --breakpoint-xs: 371px;
+  --breakpoint-md: 761px;
+  --breakpoint-lg: 1101px;
+  --breakpoint-2xl: 1500px;
+  --animate-arrive: arrive 0.75s ease-out both;
+
+  @keyframes arrive {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
